@@ -1,0 +1,96 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Fullscreen canvas */
+#lumenCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #0d0d0d 0%, #000 100%);
+  z-index: 0;
+}
+
+/* UI Panel */
+.ui-panel {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 1s ease;
+}
+
+.ui-panel h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.ui-panel p {
+  font-size: 0.95rem;
+  color: #cccccc;
+  margin-bottom: 16px;
+}
+
+.mode-switch label {
+  font-size: 0.9rem;
+  margin-right: 8px;
+  color: #ccc;
+}
+
+.mode-switch select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: black;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  outline: none;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+#soundToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#soundToggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
